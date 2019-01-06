@@ -6,7 +6,7 @@ import (
 	"github.com/minhduccm/go-cleanarch-boilerplate/databases/mongodb"
 	"github.com/minhduccm/go-cleanarch-boilerplate/repositories"
 	"github.com/minhduccm/go-cleanarch-boilerplate/usecases"
-	webservices "github.com/minhduccm/go-cleanarch-boilerplate/webservices"
+	webservices "github.com/minhduccm/go-cleanarch-boilerplate/webservices/martini"
 )
 
 func main() {

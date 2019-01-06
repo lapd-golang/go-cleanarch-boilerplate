@@ -20,7 +20,9 @@ func NewBookRepo(db Database) *BookRepo {
 	return &BookRepo{Database: db}
 }
 
-func (bookRepo *BookRepo) FindBooksByCateId(cateId int) ([]*entities.Book, error) {
+func (bookRepo *BookRepo) FindBooksByCateId(
+	cateId int,
+) ([]*entities.Book, error) {
 	rawBooks, err := bookRepo.Database.QueryBooksByCateId(cateId)
 	if err != nil {
 		return nil, err
@@ -38,7 +40,9 @@ func (bookRepo *BookRepo) FindBooksByCateId(cateId int) ([]*entities.Book, error
 	return books, nil
 }
 
-func (bookRepo *BookRepo) Store(book *entities.Book) (*entities.Book, error) {
+func (bookRepo *BookRepo) Store(
+	book *entities.Book,
+) (*entities.Book, error) {
 	bookMapper := &BookMapper{
 		Id:        book.Id,
 		Name:      book.Name,
