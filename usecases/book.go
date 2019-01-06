@@ -19,7 +19,9 @@ func NewBookUsecase(
 	}
 }
 
-func (bookUsecase *BookUsecase) GetBooksByCate(cateId int) ([]*entities.Book, error) {
+func (bookUsecase *BookUsecase) GetBooksByCate(
+	cateId int,
+) ([]*entities.Book, error) {
 	cate, err := bookUsecase.CateRepo.FindCateById(cateId)
 	if err != nil {
 		return nil, err
@@ -57,7 +59,6 @@ func (bookUsecase *BookUsecase) CreateBook(
 		Price:     price,
 		Available: true,
 		CateId:    cate.Id,
-		CateName:  cate.Name,
 	}
 	createdBook, err := bookUsecase.BookRepo.Store(book)
 	if err != nil {
