@@ -6,8 +6,7 @@ import (
 	"github.com/minhduccm/go-cleanarch-boilerplate/databases/mongodb"
 	"github.com/minhduccm/go-cleanarch-boilerplate/repositories"
 	"github.com/minhduccm/go-cleanarch-boilerplate/usecases"
-	"github.com/minhduccm/go-cleanarch-boilerplate/webframeworks/martini"
-	"github.com/minhduccm/go-cleanarch-boilerplate/wshandlers"
+	webservices "github.com/minhduccm/go-cleanarch-boilerplate/webservices"
 )
 
 func main() {
@@ -16,7 +15,6 @@ func main() {
 	bookRepo := repositories.NewBookRepo(mongoDB)
 	cateRepo := repositories.NewCateRepo(mongoDB)
 	bookUsecase := usecases.NewBookUsecase(bookRepo, cateRepo)
-	webService := wshandlers.NewWebService(bookUsecase)
-	webFW := martini.NewMartiniWF(webService)
-	webFW.Run()
+	webService := webservices.NewWebService(bookUsecase)
+	webService.Run()
 }
