@@ -6,5 +6,18 @@
 - One of the most beautiful ideas of Clean Architecture is Dependency Rule that must be applied when building software systems whose parts are to be testable and independent of frameworks, UIs, or databases. When following this rule, one ends up with a loosely coupled system with clear separation of concerns.
 ## Clean Architecture
 ### From architectural idea
+![alt text](https://github.com/minhduccm/go-cleanarch-boilerplate/blob/master/images/clean-arch-idea.png "Clean Architecture")
+
+For more detail about Clean Architecture, please look at the post here https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html
 ### To implementation in Golang
+// Add soon
 ## TODO
+* [x] Scaffolding with Clean Architecture
+* [x] Unit testing samples
+* [ ] Generate code by commands
+* [ ] Dockerization
+* [ ] PostgreSQL
+* [ ] MySQL
+* [ ] Gin (web framework)
+* [ ] Logging
+* [ ] Grateful shutting dow
